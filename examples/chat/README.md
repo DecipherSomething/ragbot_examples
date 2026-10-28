@@ -32,7 +32,7 @@ python3 -m http.server 8000
 
 Click the **⚙️ Settings** button and configure:
 
-- **API URL**: `http://localhost:8080/api/v1/chat/completions` (or your server URL)
+- **API URL**: `https://demo.deciphersomething.com/api/v1/chat/completions` is pre-filled; change it to your own deployment's `/api/v1/chat/completions`
 - **API Key**: Your API key (e.g., `sk_your_api_key_here`)
 - **Model Name**: `rag-model` (or your model identifier)
 
@@ -137,10 +137,9 @@ Just open the HTML file directly - no server needed!
 
 ## CORS Configuration
 
-The RAG API server already has CORS enabled:
+The ragBot server already has CORS enabled in its FastAPI app:
 
 ```python
-# In src/main.py
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins
@@ -189,7 +188,7 @@ The HTML structure is semantic and easy to modify:
 
 - **Enter**: Send message
 - **Shift+Enter**: New line in message
-- **Ctrl+N**: New chat (when focused on input)
+- **+ New Chat** button: start a fresh session
 
 ## Browser Compatibility
 
@@ -276,4 +275,4 @@ For issues or questions:
 
 ## License
 
-Same as the main RAG project.
+Same as the ragBot Platform.
